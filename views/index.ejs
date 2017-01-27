@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <title>Klana</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+
+    <link type="text/css" rel="stylesheet" href="resource/css/framework.css" />
+    <link type="text/css" rel="stylesheet" href="resource/css/main.css" />
+</head>
+<body>
+<div class="page">
+<!--header begin-->
+<header>
+	<div class="bigcontainer">
+		<div id="logo">
+			<a href="./">Klana</a>
+		</div>
+		<div class="user">
+			<!-- <div class="ui compact notif menu">
+			  <a class="item">
+				<i class="mail large icon"></i>
+				<span class="circular floating ui small red label"> 0 </span>
+			  </a>
+			</div> -->
+            <div class="ui inline labeled icon top right pointing dropdown">
+                <img class="ui avatar image" src="resource/images/avatar-default.gif">
+			               Ari Adiprana
+			<i class="dropdown icon"></i>
+				<div class="menu">
+					<!-- <a class="item" href="http://www.yeelink.net"><i class="reply mail icon"></i>返回首页</a> -->
+					<a class="item" href="/user/logout"><i class="sign out icon"></i>Sign Out</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- the main menu-->
+<div class="ui teal inverted menu">
+	<div class="bigcontainer">
+		<div class="left menu">
+			<a class="active item" href="./index.html"><i class="dashboard icon"></i>Dashboard</a>
+      <a class="item" href="./product_list.html"><i class="browser icon"></i>Campaign</a>
+			<a class="item" href="./user_profile.html"><i class="info icon"></i>Contact</a>
+		</div>
+	</div>
+</div>
+
+<!--the main content begin-->
+	<div class="container">
+	<!--the content-->
+		<div class="pageHeader">
+			<div class="segment">
+				<h3 class="ui dividing header">
+  					<i class="large building outline icon"></i>
+  					<div class="content">
+    					Danone
+    				<div class="sub header">PT Danone Indonesia Perkasa</div>
+  					</div>
+				</h3>
+			</div>
+		</div>
+
+    <!-- alert -->
+    <!-- <div class="ui warning message">
+          <i class="close icon" data-dismiss="alert"></i>
+        <div class="header">
+          <i class="warning icon"></i> 当前帐户还未激活.
+        </div>
+        未激活账户无法使用Yeelink服务，请检查注册时填写的邮箱，完成验证。
+        <a href="http://www.yeelink.net/login/resend_activate_mail" title="重新发送激活邮件">未收到激活邮件？</a>
+    </div> -->
+
+    <!-- Map -->
+    <h3>Vehicle Location Map</h3>
+    <div id="locmap" class="locmap">Loading...</div>
+    <div class="ui horizontal divider"></div>
+
+      <!-- DASHBOARD -->
+      <div class="ui three column grid" id="indexList">
+        <div class="row">
+          <div class="column">
+            <div class="ui blue segment">
+              <div class="inner-space">
+                <center>
+                  <h3>Distance Total</h3>
+                    <div class="ui statistic">
+                    <div class="value">
+                      5,550
+                    </div>
+                    <div class="label">
+                      Km
+                    </div>
+                  </div>
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui blue segment">
+              <div class="inner-space">
+                <center>
+                  <h3>Distance Within Targeted Areas</h3>
+                    <div class="ui statistic green">
+                    <div class="value">
+                      3,550
+                    </div>
+                    <div class="label">
+                      Km
+                    </div>
+                  </div>
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui blue segment">
+              <div class="inner-space">
+                <center>
+                  <h3>Distance Outside Targeted Areas</h3>
+                    <div class="ui statistic red">
+                    <div class="value">
+                      2,550
+                    </div>
+                    <div class="label">
+                      Km
+                    </div>
+                  </div>
+                </center>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="ui three column grid" id="indexList">
+        <div class="row">
+          <div class="column">
+            <div class="ui blue segment">
+              <div class="inner-space">
+                <h4 class="deviceName">Distance Total</h4>
+                <h1 class="valueDashboard">245 km</h1>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui blue segment">
+              <a class="content" href="#">
+                <h4 class="deviceName">设备名02</h4>
+                <p class="deviceId">设备ID：4354</p>
+                <p class="deviceDescription">这里是设备描述。</p>
+                            <p class="sensorStatus">传感器状态：
+                                <span class="ui green ok label" ></span>
+                                <span class="ui green ok label" ></span>
+                                <span class="ui green ok label" ></span>
+                            </p>
+              </a>
+            </div>
+          </div>
+          <div class="column">
+            <div class="ui blue segment">
+              <a class="content" href="#">
+                <h4 class="deviceName">设备名03</h4>
+                <p class="deviceId">设备ID：344</p>
+                <p class="deviceDescription">这里是设备描述。</p>
+                <p class="sensorStatus">传感器状态：
+                                <span class="ui green ok label" ></span>
+                                <span class="ui green ok label" ></span>
+                                <span class="ui green ok label" ></span>
+                            </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="ui blue segment">
+              <a class="content" href="./add.html">
+                <h4 class="newDevice"><i class="huge add icon"></i>
+                添加新设备</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+       <!-- <div class="ui small message" id="showApiKey">
+           <div class="ui form segment">
+                <div class="inline field">
+                    <label>您的API Key :</label>
+                    <div class="ui small left icon input short">
+                        <i class="key icon"></i>
+                        <input type="text" value="793jIEGJjkjkljfUI3JRTJOIO" readonly="readonly" id="apiKey">
+                    </div>
+                    <a class="ui mini green button" id="copy-apiKey" href="#">复制</a>
+                    <a class="ui mini blue animated button" href=./apikey_manage.html>
+                        <span class="visible content">管理</span>
+                        <span class="hidden content">
+                            <i class="key icon"></i>
+                        </span>
+                    </a>
+                    <a id="deviceQuickButton" class="ui red small labeled icon button" href="./devices_list.html">
+                        <i class="settings icon"></i>管理所有设备
+                    </a>
+                </div>
+          </div>
+      </div> -->
+	<!--device list-->
+	<!-- <div class="ui three column grid" id="indexList">
+		<div class="row">
+			<div class="column">
+				<div class="ui blue segment">
+					<a href="./device.html" class="content">
+						<h4 class="deviceName">设备名01</h4>
+						<p class="deviceId">设备ID：234</p>
+						<p class="deviceDescription">这里是设备描述。</p>
+						<p class="sensorStatus">传感器状态：
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui red error label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                        </p>
+					</a>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui blue segment">
+					<a class="content" href="#">
+						<h4 class="deviceName">设备名02</h4>
+						<p class="deviceId">设备ID：4354</p>
+						<p class="deviceDescription">这里是设备描述。</p>
+                        <p class="sensorStatus">传感器状态：
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                        </p>
+					</a>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui blue segment">
+					<a class="content" href="#">
+						<h4 class="deviceName">设备名03</h4>
+						<p class="deviceId">设备ID：344</p>
+						<p class="deviceDescription">这里是设备描述。</p>
+						<p class="sensorStatus">传感器状态：
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                            <span class="ui green ok label" ></span>
+                        </p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<div class="ui blue segment">
+					<a class="content" href="./add.html">
+						<h4 class="newDevice"><i class="huge add icon"></i>
+						添加新设备</h4>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+  <div class="ui horizontal divider"></div>
+  <div class="ui horizontal divider"></div>
+</div>
+</div>
+<!--footer begin-->
+<footer>
+	<div id="copyrights">
+		<div class="inset">
+			<div class="bigcontainer">
+				<div class="fl">
+					<h1>Klana</h1>
+					<p>&copy; 2017 ariadiprana<br />
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="resource/javascript/jquery.min.js"></script>
+<script type="text/javascript" src="resource/javascript/framework.js"></script>
+<script type="text/javascript" src="resource/javascript/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="resource/javascript/alert.js"></script>
+<script type="text/javascript" src="resource/javascript/user_new_devices.js"></script>
+<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyC7a2MMoG2nkxwY6bmxjoULoiz2YTp43iI&sensor=false&language=cn"></script>
+<script type="text/javascript" src="resource/javascript/jquery.tagsinput.js"></script>
+<script>
+	$(document).ready(function(){
+		$('a#copy-apiKey').zclip({
+			path:'resource/javascript/ZeroClipboard.swf',
+			copy:function(){return $('input#apiKey').val();}
+		});
+
+		$('.ui.dropdown')
+			.dropdown();
+	});
+</script>
+</body>
+</html>
